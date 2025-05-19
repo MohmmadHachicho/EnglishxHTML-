@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Choose Your Adventure</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-scene="page-index" class="dark">
+<div id="layout">
+    <main class="container">
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+
+        <section id="page-index" class="page active slide-up">
+            <h1>Choose Your Adventure</h1>
+            <div class="dialog-box pulse">
+                <p id="text-page-index">You are about to begin a mysterious, perilous journey. Your pulse quickens as the chill of the unknown creeps in. Every choice shapes your fate...</p><span class="typing-cursor"></span>
+            </div>
+            <button class="btn" data-target="page1">
+                <i class="fas fa-play" style="margin-right: 8px;"></i> Start Adventure
+            </button>
+        </section>
+
+        <section id="page1" class="page">
+            <h2>The Forest Awakens</h2>
+            <div class="dialog-character">
+                <div class="avatar floating" style="background-image:url('https://i.pravatar.cc/64?img=12')"></div>
+                <div class="dialog-box">
+                    <p id="text-page1">You wake up amidst broken branches and damp earth. Fog snakes through the trees like sly fingers. A fork in the bloodied path lies ahead. Choose wisely; death could be lurking.</p><span class="typing-cursor"></span>
+                </div>
+            </div>
+            <div class="button-group">
+                <button class="btn" data-target="page2a">
+                    <i class="fas fa-water" style="margin-right: 8px;"></i> Follow the sound of rushing water
+                </button>
+                <button class="btn" data-target="page2b">
+                    <i class="fas fa-mountain" style="margin-right: 8px;"></i> Climb the bloodstained hill
+                </button>
+            </div>
+        </section>
+
+        <section id="page2a" class="page">
+            <h2>The River Path</h2>
+            <div class="dialog-box">
+                <p id="text-page2a">The river flows fast and furious. Dead fish float along the murky surface. A rotten boat bobbles near the shore. Will you risk that crooked vessel, or walk the sinister riverbank littered with bones?</p><span class="typing-cursor"></span>
+            </div>
+            <div class="button-group">
+                <button class="btn" data-target="ending1">
+                    <i class="fas fa-ship" style="margin-right: 8px;"></i> Take the boat — brave the hellish rapids
+                </button>
+                <button class="btn" data-target="ending2">
+                    <i class="fas fa-walking" style="margin-right: 8px;"></i> Walk the riverbank — menace may lurk in shadows
+                </button>
+            </div>
+        </section>
+
+        <section id="page2b" class="page">
+            <h2>Hilltop View</h2>
+            <div class="dialog-box">
+                <p id="text-page2b">You ascend the hill, smelling the acrid stench of smoke and burnt flesh. The sky darkens. A hidden cave yawns nearby, ominous but possibly a refuge. Which will save you, or doom you further?</p><span class="typing-cursor"></span>
+            </div>
+            <div class="button-group">
+                <button class="btn" data-target="ending3">
+                    <i class="fas fa-fire" style="margin-right: 8px;"></i> Head to the smoke — danger or rescue?
+                </button>
+                <button class="btn" data-target="ending4">
+                    <i class="fas fa-mountain" style="margin-right: 8px;"></i> Enter the cave — darkness hides secrets… and horrors
+                </button>
+            </div>
+        </section>
+
+        <section id="ending1" class="page">
+            <h2>Freedom?</h2>
+            <div class="dialog-box">
+                <p id="text-ending1">The battered boat freezes mid-rapids; twisted metal bites into your side. Blood mixes with river water as you lose consciousness drifting toward a distant village. You survived... but scars remain.</p><span class="typing-cursor"></span>
+            </div>
+            <div class="button-group">  <!-- Added this wrapper div -->
+                <button class="btn" data-target="page-index">
+                    <i class="fas fa-redo" style="margin-right: 8px;"></i> Play Again
+                </button>
+            </div>
+        </section>
+
+        <section id="ending2" class="page">
+            <h2>The Stranger</h2>
+            <div class="dialog-box">
+                <p id="text-ending2">Along the riverbank, a grim figure draped in shadows offers you a pact — power at a deadly price. The woods whisper curses as you ponder your fate.</p><span class="typing-cursor"></span>
+            </div>
+            <div class="button-group">  <!-- Added this wrapper div -->
+                <button class="btn" data-target="page-index">
+                    <i class="fas fa-redo" style="margin-right: 8px;"></i> Start Again
+                </button>
+            </div>
+        </section>
+
+        <section id="ending3" class="page">
+            <h2>Captured</h2>
+            <div class="dialog-box shake">
+                <p id="text-ending3">Smoke reveals a brutal encampment. A snare traps you. Bandits laugh cruelly as shackles bite your wrists. Your screams echo in the dark woods — a haunting dirge.</p><span class="typing-cursor"></span>
+            </div>
+            <div class="button-group">  <!-- Added this wrapper div -->
+                <button class="btn" data-target="page-index">
+                    <i class="fas fa-redo" style="margin-right: 8px;"></i> Try Again
+                </button>
+            </div>
+        </section>
+
+        <section id="ending4" class="page">
+            <h2>Secret Treasure</h2>
+            <div class="dialog-box pulse">
+                <p id="text-ending4">You delve deep into the cave, finding ancient, bloodstained relics and gold that pulses with uncanny energy. Victory tinged with unease – some treasures demand a price.</p><span class="typing-cursor"></span>
+            </div>
+            <div class="button-group">  <!-- Added this wrapper div -->
+                <button class="btn" data-target="page-index">
+                    <i class="fas fa-redo" style="margin-right: 8px;"></i> Play Again
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <aside id="sidebar">
+        <h3>Your Journey</h3>
+        <section>
+            <h4><i class="fas fa-history" style="margin-right: 8px;"></i> Choice History</h4>
+            <ul id="choice-history"></ul>
+        </section>
+        <section>
+            <h4><i class="fas fa-backpack" style="margin-right: 8px;"></i> Inventory</h4>
+            <ul id="inventory-list"></ul>
+        </section>
+        <section>
+            <h4><i class="fas fa-trophy" style="margin-right: 8px;"></i> Unlocked Endings</h4>
+            <ul id="endings-list"></ul>
+        </section>
+    </aside>
+</div>
+
+<button id="theme-toggle">
+    <i class="fas fa-moon"></i> Dark Mode
+</button>
+<button id="sidebar-toggle">☰</button>
+<footer>Created by Mohammad Hachicho &mdash; <a href="mailto:mohammad.hachicho@rhhs.edu.lb" style="color: inherit;">mohammad.hachicho@rhhs.edu.lb</a></footer>
+
+<audio id="ambient-player" loop preload="auto"></audio>
+<audio id="sfx-player" preload="auto"></audio>
+<audio id="transition-sfx" preload="auto" src="https://assets.mixkit.co/sfx/preview/mixkit-arcade-game-jump-coin-216.mp3"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
